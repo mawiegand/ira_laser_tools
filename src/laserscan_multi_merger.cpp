@@ -82,13 +82,13 @@ void LaserscanMerger::laserscan_topic_parser()
 
 	for(int i=0;i<tokens.size();++i)
 	{
-	        for(int j=0;j<topics.size();++j)
-		{
-			if( (tokens[i].compare(topics[j].name) == 0) && (topics[j].datatype.compare("sensor_msgs/LaserScan") == 0) )
-			{
-				tmp_input_topics.push_back(topics[j].name);
-			}
-		}
+//	        for(int j=0;j<topics.size();++j)
+//		{
+//			if( (tokens[i].compare(topics[j].name) == 0) && (topics[j].datatype.compare("sensor_msgs/LaserScan") == 0) )
+//			{
+                tmp_input_topics.push_back(tokens[i]);
+//			}
+//		}
 	}
 
 	sort(tmp_input_topics.begin(),tmp_input_topics.end());
